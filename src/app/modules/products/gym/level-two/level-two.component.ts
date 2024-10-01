@@ -17,7 +17,7 @@ export class LevelTwoComponent {
       sizes: '60 cm de alto, 40 cm de ancho y 35 cm de profundidad',
       price: '100',
       image: {
-        src: '../assets/products/gym-1.webp',
+        src: '/assets/products/gym-1.webp',
         alt: 'rascador horizontal',
       },
       classColor: 'blue',
@@ -32,7 +32,7 @@ export class LevelTwoComponent {
       sizes: '65 cm de alto, con base de 45x40 cm',
       price: '120',
       image: {
-        src: '../assets/products/gym-2.webp',
+        src: '/assets/products/gym-2.webp',
         alt: 'rascador horizontal',
       },
       classColor: 'blue',

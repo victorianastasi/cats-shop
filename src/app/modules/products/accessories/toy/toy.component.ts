@@ -15,7 +15,7 @@ export class ToyComponent {
       sizes: '5 cm de largo, 6cm de altura, 4 cm de ancho',
       price: 25,
       image: {
-        src: '../assets/products/toy-1.webp',
+        src: '/assets/products/toy-1.webp',
         alt: 'Juguete',
       },
       customClass: 'p-0',
@@ -29,7 +29,7 @@ export class ToyComponent {
       sizes: '4 cm',
       price: 10,
       image: {
-        src: '../assets/products/toy-2.webp',
+        src: '/assets/products/toy-2.webp',
         alt: 'Juguete',
       },
       customClass: 'p-0',
@@ -43,7 +43,7 @@ export class ToyComponent {
       sizes: '84 cm de largo, 25cm de alto',
       price: 50,
       image: {
-        src: '../assets/products/toy-3.webp',
+        src: '/assets/products/toy-3.webp',
         alt: 'Juguete',
       },
       customClass: 'p-0',

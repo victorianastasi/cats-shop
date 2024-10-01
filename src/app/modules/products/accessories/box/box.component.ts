@@ -14,7 +14,7 @@ export class BoxComponent {
       sizes: 'Largo:40 cm, Ancho:30 cm, Alto:11 cm',
       price: 30,
       image: {
-        src: '../assets/products/box-1.jpg',
+        src: '/assets/products/box-1.jpg',
         alt: 'bandejas',
       },
       customClass: 'p-0',
@@ -27,7 +27,7 @@ export class BoxComponent {
       sizes: 'Largo:50 cm, Ancho:35 cm, Alto:15 cm',
       price: 37,
       image: {
-        src: '../assets/products/box-2.jpg',
+        src: '/assets/products/box-2.jpg',
         alt: 'bandejas',
       },
       customClass: 'p-0',

@@ -15,7 +15,7 @@ export class FoodComponent {
       sizes: '29 cm de ancho, 20 de profundidad y 7 de altura',
       price: 20,
       image: {
-        src: '../assets/products/food-1.webp',
+        src: '/assets/products/food-1.webp',
         alt: 'comedero',
       },
       customClass: 'p-0',
@@ -29,7 +29,7 @@ export class FoodComponent {
       sizes: 'Largo x Ancho x Altura: 34.5 cm x 19 cm x 5 cm',
       price: 30,
       image: {
-        src: '../assets/products/food-2.webp',
+        src: '/assets/products/food-2.webp',
         alt: 'comedero',
       },
       customClass: 'p-0',
