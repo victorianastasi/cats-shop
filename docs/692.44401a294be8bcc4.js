@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcats_shop=self.webpackChunkcats_shop||[]).push([[692],{3692:(l,o,a)=>{a.r(o),a.d(o,{WatererModule:()=>u});var t=a(6895),r=a(4650);let u=(()=>{class e{}return e.\u0275fac=function(s){return new(s||e)},e.\u0275mod=r.oAB({type:e}),e.\u0275inj=r.cJS({imports:[t.ez]}),e})()}}]);
