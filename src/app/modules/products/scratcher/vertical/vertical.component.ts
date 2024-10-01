@@ -17,7 +17,7 @@ export class VerticalComponent implements OnInit {
       sizes: '70 cm de altura',
       price: 40,
       image: {
-        src: '/assets/products/ras_ver_2.jpg',
+        src: 'assets/products/ras_ver_2.jpg',
         alt: 'rascador vertical',
       },
       classColor: 'blue',
@@ -32,7 +32,7 @@ export class VerticalComponent implements OnInit {
       sizes: '80 cm de altura',
       price: 35,
       image: {
-        src: '/assets/products/rascador_ver_2.webp',
+        src: 'assets/products/rascador_ver_2.webp',
         alt: 'rascador vertical',
       },
       classColor: 'blue',
@@ -47,7 +47,7 @@ export class VerticalComponent implements OnInit {
       sizes: '75 cm de altura',
       price: 50,
       image: {
-        src: '/assets/products/ras_ver_3.jpeg',
+        src: 'assets/products/ras_ver_3.jpeg',
         alt: 'rascador vertical',
       },
       classColor: 'blue',
@@ -62,7 +62,7 @@ export class VerticalComponent implements OnInit {
       sizes: '60 cm de altura',
       price: 25,
       image: {
-        src: '/assets/products/rascador_ver_1.jpg',
+        src: 'assets/products/rascador_ver_1.jpg',
         alt: 'rascador vertical',
       },
       classColor: 'blue',

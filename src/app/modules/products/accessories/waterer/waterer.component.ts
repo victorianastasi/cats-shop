@@ -15,7 +15,7 @@ export class WatererComponent {
       sizes: '29 cm de ancho, 20 de profundidad y 7 de altura',
       price: 50,
       image: {
-        src: '/assets/products/waterer-1.webp',
+        src: 'assets/products/waterer-1.webp',
         alt: 'bebedero',
       },
       customClass: 'p-0',

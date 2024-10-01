@@ -17,7 +17,7 @@ export class LevelThreeComponent {
       sizes: '85 cm de alto, 50 cm de ancho y 40 cm de profundidad',
       price: '120',
       image: {
-        src: '/assets/products/gym-3niv.webp',
+        src: 'assets/products/gym-3niv.webp',
         alt: 'rascador horizontal',
       },
       classColor: 'blue',
@@ -32,7 +32,7 @@ export class LevelThreeComponent {
       sizes: '90 cm de alto, con base de 50x45 cm.',
       price: '130',
       image: {
-        src: '/assets/products/gym-2.webp',
+        src: 'assets/products/gym-2.webp',
         alt: 'rascador horizontal',
       },
       classColor: 'blue',

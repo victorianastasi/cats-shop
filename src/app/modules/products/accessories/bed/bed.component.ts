@@ -14,7 +14,7 @@ export class BedComponent {
       sizes: '50 cm de diámetro',
       price: 60,
       image: {
-        src: '/assets/products/bed-1.webp',
+        src: 'assets/products/bed-1.webp',
         alt: 'camas',
       },
       customClass: 'p-0',
@@ -28,7 +28,7 @@ export class BedComponent {
       sizes: '50 cm de diámetro',
       price: 50,
       image: {
-        src: '/assets/products/bed-2.webp',
+        src: 'assets/products/bed-2.webp',
         alt: 'camas',
       },
       customClass: 'p-0',
@@ -42,7 +42,7 @@ export class BedComponent {
       sizes: '70 cm de diámetro',
       price: 70,
       image: {
-        src: '/assets/products/bed-3.webp',
+        src: 'assets/products/bed-3.webp',
         alt: 'camas',
       },
       customClass: 'p-0',

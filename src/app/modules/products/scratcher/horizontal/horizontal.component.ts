@@ -17,7 +17,7 @@ export class HorizontalComponent implements OnInit {
       sizes: '45x25 cm',
       price: 20,
       image: {
-        src: '/assets/products/ras_hor_1.webp',
+        src: 'assets/products/ras_hor_1.webp',
         alt: 'rascador horizontal',
       },
       classColor: 'blue',
@@ -32,7 +32,7 @@ export class HorizontalComponent implements OnInit {
       sizes: '50x30 cm',
       price: 30,
       image: {
-        src: '/assets/products/rascador_hor_1.jpg',
+        src: 'assets/products/rascador_hor_1.jpg',
         alt: 'rascador horizontal',
       },
       classColor: 'blue',
@@ -46,7 +46,7 @@ export class HorizontalComponent implements OnInit {
       sizes: '40x20 cm',
       price: 15,
       image: {
-        src: '/assets/products/ras_hor_3.webp',
+        src: 'assets/products/ras_hor_3.webp',
         alt: 'rascador horizontal',
       },
       classColor: 'blue',
@@ -60,7 +60,7 @@ export class HorizontalComponent implements OnInit {
       sizes: '60x25 cm',
       price: 40,
       image: {
-        src: '/assets/products/ras_hor_4.jpg',
+        src: 'assets/products/ras_hor_4.jpg',
         alt: 'rascador horizontal',
       },
       classColor: 'blue',
