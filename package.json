@@ -23,6 +23,7 @@
     "@angular/router": "^14.2.0",
     "@ng-bootstrap/ng-bootstrap": "^13.0.0",
     "@popperjs/core": "^2.10.2",
+    "angular-cli-ghpages": "^2.0.1",
     "bootstrap": "^5.3.3",
     "flag-icons": "^7.2.3",
     "ngx-clipboard": "15.1.0",
