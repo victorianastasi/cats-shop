@@ -1,0 +1,63 @@
+@import "../../../main.scss";
+
+.about-section {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 400;
+  color: $gray;
+
+  .about-title {
+    font-weight: 600;
+    padding: 0 0 4.05rem;
+    margin-bottom: 3rem;
+    background-color: $orange-light;
+  }
+  .about-img {
+    max-width: 396px;
+  }
+
+  .contact-items {
+    a {
+      color: $white;
+      line-height: 32px;
+      display: block;
+      margin-bottom: 0.75rem;
+      padding-right: 0.5rem;
+      background-color: $dark-color;
+      border-radius: 32px;
+      line-height: 16px;
+      transition: all 0.15s ease-in-out;
+      text-decoration: none;
+      span {
+        line-height: 16px;
+      }
+      .icon-box {
+        color: $dark-color;
+        min-width: 32px;
+        min-height: 32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 32px;
+        background-color: $orange-light;
+        margin-right: 0.5rem;
+        box-shadow: 0 0 0 0.125rem $orange-light;
+        i {
+          font-size: 1rem;
+          height: 1rem;
+          width: 1rem;
+          line-height: 1rem;
+        }
+      }
+      &:hover {
+        background-color: $orange-light;
+        border-radius: 32px;
+        color: $dark-color;
+        .icon-box {
+          background-color: $dark-color;
+          color: white;
+          box-shadow: 0 0 0 0.125rem $dark-color;
+        }
+      }
+    }
+  }
+}

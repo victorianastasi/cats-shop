@@ -1,0 +1,21 @@
+<h2 class="title-bg">Rascadores Horizontales</h2>
+<app-order-price-button
+  [action]="sortByPriceAsc.bind(this)"
+  [conditional]="isPriceAscActive"
+></app-order-price-button>
+
+<div class="row row-cols-1 row-cols-sm-2 g-3">
+  <div class="col" *ngFor="let horizontalItem of horizontalItems">
+    <app-card
+      [title]="horizontalItem.title"
+      [icon]="horizontalItem.icon"
+      [description]="horizontalItem.description"
+      [sizes]="horizontalItem.sizes"
+      [price]="horizontalItem.price"
+      [image]="horizontalItem.image"
+      [classColor]="horizontalItem.classColor"
+      [customClass]="horizontalItem.customClass"
+      [imageContain]="horizontalItem.imageContain"
+    ></app-card>
+  </div>
+</div>

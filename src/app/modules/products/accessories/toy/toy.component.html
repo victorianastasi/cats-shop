@@ -1,0 +1,16 @@
+<h2 class="title-bg">Juguetes</h2>
+
+<div class="row row-cols-1 row-cols-sm-2 g-3">
+  <div class="col" *ngFor="let toyItem of toyItems">
+    <app-card
+      [title]="toyItem.title"
+      [icon]="toyItem.icon"
+      [description]="toyItem.description"
+      [sizes]="toyItem.sizes"
+      [price]="toyItem.price"
+      [image]="toyItem.image"
+      [customClass]="toyItem.customClass"
+      [imageContain]="toyItem.imageContain"
+    ></app-card>
+  </div>
+</div>

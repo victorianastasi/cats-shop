@@ -1,0 +1,44 @@
+@import "bootstrap/scss/bootstrap";
+@import "../../../main.scss";
+
+header {
+  background-color: $gray;
+  color: $light-color;
+}
+.nav-pills {
+  .nav-link__header {
+    border: 1px solid $light-color;
+    width: fit-content;
+    color: $light-color;
+    &.active,
+    &:active,
+    &.hover,
+    &:hover {
+      background-color: $light-color;
+      color: $gray;
+      background-color: $orange-light;
+      border-color: $gray;
+    }
+    @media screen and (max-width: 992px) {
+      background-color: $gray;
+      border-color: $gray;
+      min-width: 150px;
+    }
+  }
+}
+
+.nav-link__header,
+a,
+app-search .form-control {
+  &.focus,
+  &:focus,
+  &:focus-visible {
+    outline: 2px solid $light-color;
+    box-shadow: none;
+  }
+}
+
+.offcanvas.offcanvas-end {
+  background-image: linear-gradient(to top, #cecece, $light-color);
+  max-width: 80%;
+}

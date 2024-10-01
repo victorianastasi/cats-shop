@@ -1,0 +1,16 @@
+<h2 class="title-bg">Bandejas sanitarias</h2>
+
+<div class="row row-cols-1 row-cols-sm-2 g-3">
+  <div class="col" *ngFor="let boxItem of boxItems">
+    <app-card
+      [title]="boxItem.title"
+      [icon]="boxItem.icon"
+      [description]="boxItem.description"
+      [sizes]="boxItem.sizes"
+      [price]="boxItem.price"
+      [image]="boxItem.image"
+      [customClass]="boxItem.customClass"
+      [imageContain]="boxItem.imageContain"
+    ></app-card>
+  </div>
+</div>

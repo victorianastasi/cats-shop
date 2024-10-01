@@ -1,0 +1,17 @@
+<h2 class="title-bg">Gimnasio de 2 niveles</h2>
+
+<div class="row row-cols-1 row-cols-sm-2 g-3">
+  <div class="col" *ngFor="let levelTwoGym of levelTwoGyms">
+    <app-card
+      [title]="levelTwoGym.title"
+      [icon]="levelTwoGym.icon"
+      [description]="levelTwoGym.description"
+      [sizes]="levelTwoGym.sizes"
+      [price]="levelTwoGym.price"
+      [image]="levelTwoGym.image"
+      [classColor]="levelTwoGym.classColor"
+      [customClass]="levelTwoGym.customClass"
+      [imageContain]="levelTwoGym.imageContain"
+    ></app-card>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<h2 class="title-bg">Camas</h2>
+
+<div class="row row-cols-1 row-cols-sm-2 g-3">
+  <div class="col" *ngFor="let bedItem of bedItems">
+    <app-card
+      [title]="bedItem.title"
+      [icon]="bedItem.icon"
+      [description]="bedItem.description"
+      [sizes]="bedItem.sizes"
+      [price]="bedItem.price"
+      [image]="bedItem.image"
+      [customClass]="bedItem.customClass"
+      [imageContain]="bedItem.imageContain"
+    ></app-card>
+  </div>
+</div>

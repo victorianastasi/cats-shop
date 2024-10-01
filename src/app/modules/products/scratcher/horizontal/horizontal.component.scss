@@ -1,0 +1,18 @@
+.order-price {
+  @media (min-width: 592px) {
+    min-width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-left: auto;
+  }
+
+  &[aria-pressed="false"] {
+    background-color: white;
+    color: #212529;
+  }
+  .bx {
+    font-size: 18px;
+  }
+}

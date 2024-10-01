@@ -1,0 +1,30 @@
+<div
+  class="card"
+  [ngClass]="
+    (classColor ? 'border-' + classColor : '') +
+    ' ' +
+    (customClass ? customClass : '')
+  "
+>
+  <div class="card-body">
+    <img
+      *ngIf="image"
+      src="{{ image.src }}"
+      alt="{{ image.alt }}"
+      class="card-img"
+      [ngClass]="imageContain ? 'image-contain' : null"
+    />
+    <div class="card-title">
+      <mat-icon *ngIf="icon">{{ icon }}</mat-icon>
+      <h3 *ngIf="title">{{ title }}</h3>
+    </div>
+    <p class="card-text" *ngIf="description">{{ description }}</p>
+    <p class="card-text text-body-secondary small" *ngIf="sizes">
+      Medidas: {{ sizes }}
+    </p>
+    <p class="card-text text-body-secondary" *ngIf="price">
+      {{ price | currency }}
+    </p>
+    <ng-content></ng-content>
+  </div>
+</div>

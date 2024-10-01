@@ -1,0 +1,16 @@
+<h2 class="title-bg">Comedero</h2>
+
+<div class="row row-cols-1 row-cols-sm-2 g-3">
+  <div class="col" *ngFor="let foodItem of foodItems">
+    <app-card
+      [title]="foodItem.title"
+      [icon]="foodItem.icon"
+      [description]="foodItem.description"
+      [sizes]="foodItem.sizes"
+      [price]="foodItem.price"
+      [image]="foodItem.image"
+      [customClass]="foodItem.customClass"
+      [imageContain]="foodItem.imageContain"
+    ></app-card>
+  </div>
+</div>

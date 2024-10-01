@@ -1,0 +1,16 @@
+<h2 class="title-bg">Bebederos</h2>
+
+<div class="row row-cols-1 row-cols-sm-2 g-3">
+  <div class="col" *ngFor="let watererItem of watererItems">
+    <app-card
+      [title]="watererItem.title"
+      [icon]="watererItem.icon"
+      [description]="watererItem.description"
+      [sizes]="watererItem.sizes"
+      [price]="watererItem.price"
+      [image]="watererItem.image"
+      [customClass]="watererItem.customClass"
+      [imageContain]="watererItem.imageContain"
+    ></app-card>
+  </div>
+</div>

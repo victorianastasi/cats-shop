@@ -1,0 +1,131 @@
+<div class="container-fluid my-5">
+  <button
+    class="btn btn-dark products-menu-btn"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#productsMenu"
+    aria-expanded="false"
+    aria-controls="productsMenu"
+  >
+    <span>Catálogo de Productos</span>
+  </button>
+  <div class="container">
+    <div class="products-layout">
+      <div class="products-menu-content collapse" id="productsMenu">
+        <ng-container *ngFor="let doc of navigationItems">
+          <div class="mb-2">
+            <button
+              class="btn products-menu-items-btn"
+              type="button"
+              data-bs-toggle="collapse"
+              [attr.data-bs-target]="'#' + doc.id"
+              [attr.aria-expanded]="true"
+              [attr.aria-controls]="doc.id"
+            >
+              <span class="d-flex align-items-center"
+                ><mat-icon class="me-2 fs-6">label</mat-icon
+                >{{ doc.title }}</span
+              >
+              <mat-icon class="me-2 mat-icon-arrow">expand_more</mat-icon>
+            </button>
+
+            <div class="collapse show" id="{{ doc.id }}">
+              <div class="card card-body products-menu-items-content">
+                <nav class="nav nav-pills flex-column">
+                  <ng-container *ngFor="let item of doc.items">
+                    <a
+                      class="nav-link"
+                      routerLink="{{ item.route }}"
+                      [class.active]="
+                        isRouteActive(item.route ? item.route : '')
+                      "
+                      >{{ item.title }}</a
+                    >
+                  </ng-container>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+
+      <div class="d-flex justify-content-center mt-3 mt-md-0">
+        <div class="">
+          <router-outlet *ngIf="!isRouteActive('/products')"></router-outlet>
+          <div *ngIf="isRouteActive('/products')" class="products-template">
+            <h2 class="title-bg font-fredoka">Bienvenido a los productos de Cats Shop</h2>
+            <section
+              class="d-flex flex-column flex-xl-row-reverse align-items-center gap-5 my-5"
+            >
+              <div>
+                <h3 class="products-subtitle">
+                  Diversión y Bienestar para tu Felino
+                </h3>
+                <p>
+                  Los gatos, por naturaleza, son animales curiosos y juguetones.
+                </p>
+                <p>
+                  Proveerles de juguetes adecuados no solo satisface su instinto
+                  de caza, sino que también promueve su bienestar físico y
+                  mental.
+                </p>
+                <p>
+                  En esta sección encontrarás algunos de los productos de juego
+                  más populares y beneficiosos para tu gato.
+                </p>
+              </div>
+
+              <div class="products-image-box shrink">
+                <img
+                  src="../../../assets/products/products-cat.svg"
+                  alt=""
+                  class="rounded-circle my-2 shadow products-image"
+                />
+              </div>
+            </section>
+
+            <section class="mb-5">
+              <h3 class="products-subtitle">Beneficios del Juego para Gatos</h3>
+              <p>
+                El juego no solo es divertido para los gatos, sino que también
+                es vital para su salud y bienestar. A través del juego, los
+                gatos pueden:
+              </p>
+              <ul>
+                <li class="mb-2">
+                  <strong>Ejercitarse</strong>: Manteniendo un peso saludable y
+                  fortaleciendo sus músculos.
+                </li>
+                <li class="mb-2">
+                  <strong>Estimular su mente</strong>: Evitando el aburrimiento
+                  y el estrés.
+                </li>
+                <li class="mb-2">
+                  <strong>Satisfacer sus instintos naturales</strong>: Como el
+                  acecho, la caza y el rascado.
+                </li>
+                <li class="mb-2">
+                  <strong>Fortalecer el vínculo con sus dueños</strong>:
+                  Mediante el juego interactivo.
+                </li>
+              </ul>
+            </section>
+            <section class="mb-5">
+              <p>
+                Invertir en una variedad de juguetes adecuados para tu gato no
+                solo hará que tu felino esté feliz y saludable, sino que también
+                puede prevenir problemas de comportamiento relacionados con el
+                aburrimiento y la falta de estimulación.
+              </p>
+              <p>
+                Explora las opciones disponibles y encuentra los productos que
+                mejor se adapten a la personalidad y preferencias de tu gato.
+                ¡Tu amigo peludo te lo agradecerá!
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

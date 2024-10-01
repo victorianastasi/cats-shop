@@ -1,0 +1,216 @@
+@import "bootstrap/scss/bootstrap";
+@import "../../../main.scss";
+
+
+/*Animacion principal*/
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: "";
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+  -webkit-animation: $animations;
+  -moz-animation: $animations;
+  -o-animation: $animations;
+  animation: $animations;
+}
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+.splash {
+  background: $gray center/cover no-repeat;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  min-height: 400px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+
+  .animate {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &_logo {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    p {
+      padding: 0px;
+      margin: 0px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      color: $orange;
+      line-height: 48px;
+      border-top: 1px $greylight solid;
+      border-bottom: 1px $greylight solid;
+      opacity: 1;
+      will-change: opacity;
+      @include animation(
+        "logo 1s ease-in 0.5s forwards, off .6s ease-in-out 2s forwards"
+      );
+    }
+  }
+  &_svg {
+    position: relative;
+    margin: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    svg {
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: visible;
+      backface-visibility: visible;
+      rect {
+        width: 100%;
+        height: 100%;
+        fill: $light-color;
+        stroke: 0;
+        // clip-path: polygon(45% 35%, 55% 35%, 55% 65%, 45% 65%);
+        clip-path: polygon(42% 35%, 58% 35%, 58% 65%, 42% 65%);
+        @media (max-width: 992px) {
+          // clip-path: polygon(30% 35%, 70% 35%, 70% 65%, 30% 65%);
+          clip-path: polygon(25% 35%, 75% 35%, 75% 65%, 25% 65%);
+        }
+        @include animation("expand 0.7s ease-in-out forwards 1.7s");
+      }
+    }
+  }
+  .content {
+    opacity: 0;
+    position: absolute;
+    z-index: 7;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "Fredoka", sans-serif;
+    color: $primary-color;
+    text-shadow: 5px 5px 5px #b7b9ba;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    @media (max-width: 768px) {
+      max-width: 100vw;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem 0;
+      font-size: 1.75rem;
+    }
+
+    .content-text {
+      @media (max-width: 768px) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .text__title {
+      font-size: 50px;
+    }
+    p {
+      padding-right: 1rem;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 100%;
+      @include animation("type 0.7s steps(60, end) 2.7s");
+    }
+    img, .iframe-cover {
+      width: 400px;
+      height: 400px;
+      box-shadow: 0 1rem 3rem rgba(255, 255, 255, 0.175);
+      @media (max-width: 992px) {
+        width: 250px;
+        height: 250px;
+      }
+      @media (max-width: 768px) {
+        max-width: 100vw;
+        width: 100vw;
+      }
+    }
+    @include animation("on 1s linear 2.7s forwards");
+  }
+}
+
+@include keyframes(off) {
+  100% {
+    opacity: 0;
+  }
+}
+@include keyframes(on) {
+  100% {
+    opacity: 1;
+  }
+}
+@include keyframes(logo) {
+  100% {
+    color: $dark-color;
+    border-color: $orange;
+    border-width: 2px;
+  }
+}
+@include keyframes(type) {
+  0% {
+    width: 0;
+  }
+}
+@include keyframes(expand) {
+  0% {
+  }
+  25% {
+    clip-path: polygon(45% 35%, 55% 35%, 55% 65%, 45% 65%);
+    -webkit-clip-path: polygon(45% 35%, 55% 35%, 55% 65%, 45% 65%);
+    fill: $light-color;
+  }
+  50% {
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 55% 65%, 45% 65%);
+    clip-path: polygon(0% 0%, 100% 0%, 55% 65%, 45% 65%);
+    fill: $light-color;
+  }
+  75% {
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 55% 65%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 55% 65%, 0% 100%);
+    fill: $light-color;
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    fill: $light-color;
+  }
+}

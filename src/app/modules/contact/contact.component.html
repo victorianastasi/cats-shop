@@ -1,0 +1,153 @@
+<div class="contact-section">
+  <div class="contact-title">
+    <div class="container">
+      <h1 class="fw-semibold">Contactanos</h1>
+    </div>
+  </div>
+  <section class="container mb-5">
+    <div class="row">
+      <div class="contact-bg">
+        <div
+          class="col-12 col-lg-8 col-xl-6 ms-lg-auto rounded px-3 py-4 custom-bg"
+        >
+          <form
+            action=""
+            class="user-form row g-4"
+            [formGroup]="userForm"
+            (ngSubmit)="onSubmit()"
+          >
+            <legend class="fw-semibold">
+              Envianos tu consulta <br /><span class="fs-6 fw-normal"
+                ><small>* Campos requeridos</small></span
+              >
+            </legend>
+            <div class="col-12 col-lg-6 mb-3">
+              <div class="form-floating">
+                <input
+                  formControlName="name"
+                  type="text"
+                  class="form-control"
+                  id="floatingInputName"
+                  placeholder=""
+                  [ngClass]="validationStyleClass('name')"
+                />
+                <label for="floatingInputName">Nombre*</label>
+                <div class="invalid-tooltip">
+                  {{getErrors('name')?.['minlength'] && 'Debe tener al menos 3 caracteres.'}}
+                  {{getErrors('name')?.['required'] && 'Este campo es requerido.'}}
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 mb-3">
+              <div class="form-floating">
+                <input
+                  formControlName="surname"
+                  type="text"
+                  class="form-control"
+                  id="floatingInputSurname"
+                  placeholder=""
+                  [ngClass]="validationStyleClass('surname')"
+                />
+                <label for="floatingInputSurname">Apellido*</label>
+                <div class="invalid-tooltip">
+                  {{getErrors('surname')?.['minlength'] && 'Debe tener al menos 2 caracteres.'}}
+                  {{getErrors('surname')?.['required'] && 'Este campo es requerido.'}}
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+              <div class="form-floating">
+                <input
+                  formControlName="email"
+                  type="email"
+                  class="form-control"
+                  [ngClass]="validationStyleClass('email')"
+                  id="floatingInputEmail"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInputEmail">Correo electrónico*</label>
+                <div class="invalid-tooltip">
+                  {{getErrors('email')?.['required'] && 'Este campo es requerido.'}}
+                  {{getErrors('email')?.['invalidEmail'] && 'El correo electrónico no es válido.'}}
+                </div>
+                <!-- <pre>{{userForm.get('email')?.errors | json}}</pre> -->
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+              <div class="input-group" formGroupName="phone">
+                <span class="input-group-text">Teléfono: </span>
+                <div class="form-floating">
+                  <select
+                    class="form-select"
+                    id="inputPhoneCode"
+                    formControlName="code"
+                  >
+                    <option selected>Seleccionar...</option>
+                    <option
+                      *ngFor="let areaCode of areaCodes"
+                      [value]="areaCode"
+                    >
+                      {{ areaCode }}
+                    </option>
+                  </select>
+                  <label for="inputPhoneCode">Código de área: </label>
+                </div>
+                <div class="form-floating">
+                  <input
+                    type="number"
+                    id="inputPhoneNumber"
+                    class="form-control"
+                    formControlName="number"
+                    placeholder=""
+                  />
+                  <label for="inputPhoneNumber">Número: </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+              <div class="form-floating">
+                <textarea
+                  formControlName="message"
+                  class="form-control"
+                  placeholder="Deja tu comentario"
+                  id="floatingTextarea"
+                  [ngClass]="validationStyleClass('message')"
+                  maxlength="300"
+                ></textarea>
+                <label for="floatingTextarea">Mensaje*</label>
+                <span
+                  class="badge rounded-pill text-bg-dark position-absolute message-counter"
+                >
+                  <span>{{ messageLength }}</span>
+                  <span> / 300</span>
+                </span>
+                <div class="invalid-tooltip">Este campo es requerido.</div>
+              </div>
+            </div>
+
+            <div class="col-12 mb-3">
+              <div class="form-check">
+                <input
+                  formControlName="suscription"
+                  class="form-check-input"
+                  type="checkbox"
+                  id="suscriptionCheck"
+                />
+                <label class="form-check-label" for="suscriptionCheck">
+                  Quiero suscribirme al correo de novedades.
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-dark w-100">
+                Enviar 🚀
+              </button>
+            </div>
+
+            <!-- <pre>{{ userForm.value | json }}</pre> -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

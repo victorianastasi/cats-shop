@@ -1,0 +1,58 @@
+@import "bootstrap/scss/bootstrap";
+@import "../../../main.scss";
+
+$grey: rgb(41, 41, 41);
+.card {
+  height: 100%;
+  background-color: $gray-100;
+  border: 1px solid $gray-200;
+  padding: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  color: #38485c;
+
+  &.border-green {
+    box-shadow: 0 0.5rem 1rem rgba(25, 135, 84, 0.15);
+  }
+  &.border-warning {
+    box-shadow: 0 0.5rem 1rem rgba(157, 119, 6, 0.15);
+  }
+  &.border-blue {
+    box-shadow: 0 0.5rem 1rem rgba(13, 110, 253, 0.15);
+  }
+  .card-title {
+    margin-bottom: 1.5rem;
+    background-image: linear-gradient(to right, $yellow-dark, $orange);
+    background-size: 100% 3px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    h3 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+      font-weight: 700;
+      font-family: "Fredoka", sans-serif;
+      font-weight: 500;
+    }
+    mat-icon {
+      min-width: 24px;
+      font-size: 24px;
+    }
+  }
+  mat-icon {
+    font-size: 1rem;
+  }
+  .card-img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.25rem;
+    &.image-contain {
+      object-fit: contain;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+<header class="py-2">
+  <div class="container">
+    <h1 class="visually-hidden">Cat's Shop</h1>
+    <nav class="d-flex align-items-center justify-content-between">
+      <a
+        href="/"
+        class="d-flex align-items-center text-white gap-1 fw-semibold text-decoration-none rounded-pill"
+      >
+        <img
+          src="../../../assets/logo.avif"
+          alt="Obelisco"
+          height="45"
+          class="d-inline-block align-text-top rounded-circle"
+        />
+        <span>Cat's Shop</span>
+      </a>
+      <div class="d-none d-lg-flex">
+        <ng-container *ngTemplateOutlet="navContent"></ng-container>
+      </div>
+      <button
+        class="btn btn-outline-light flex justify-content-center align-items-center d-lg-none"
+        (click)="openEnd(content)"
+      >
+        <mat-icon class="mt-1">menu</mat-icon>
+      </button>
+    </nav>
+
+    <ng-template #content let-offcanvas>
+      <div class="offcanvas-header">
+        <h4 class="offcanvas-title">Menú</h4>
+        <button
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+          (click)="offcanvas.dismiss('Cross click')"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ng-container *ngTemplateOutlet="navContent"></ng-container>
+      </div>
+    </ng-template>
+  </div>
+</header>
+
+<ng-template #navContent>
+  <ul
+    ngbNav
+    #nav="ngbNav"
+    class="nav-pills nav-dark flex flex-lg-row flex-column gap-2"
+  >
+    <li ngbNavItem>
+      <a
+        ngbNavLink
+        class="nav-link nav-link__header rounded-pill"
+        routerLink="products"
+        [class.active]="isRouteActive('/products')"
+        (click)="closeEnd(content)"
+        >Productos</a
+      >
+    </li>
+    <li ngbNavItem>
+      <a
+        ngbNavLink
+        class="nav-link nav-link__header rounded-pill"
+        routerLink="about"
+        [class.active]="isRouteActive('/about')"
+        (click)="closeEnd(content)"
+        >Nosotros</a
+      >
+    </li>
+    <li ngbNavItem>
+      <a
+        ngbNavLink
+        class="nav-link nav-link__header rounded-pill"
+        routerLink="contact"
+        [class.active]="isRouteActive('/contact')"
+        (click)="closeEnd(content)"
+        >Contacto</a
+      >
+    </li>
+    <li>
+      <app-search></app-search>
+    </li>
+  </ul>
+</ng-template>

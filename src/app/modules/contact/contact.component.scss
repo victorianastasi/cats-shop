@@ -1,0 +1,77 @@
+@import "../../../main.scss";
+
+.contact-img {
+  max-width: 120px;
+  height: 120px;
+  @media (min-width: 768px) {
+    max-width: 240px;
+    height: 240px;
+  }
+  @media (min-width: 1200px) {
+    margin-right: 8rem;
+  }
+}
+
+.contact-bg {
+  @media (min-width: 992px) {
+    background-image: url("../../../assets/cat.svg");
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+    background-size: 45%;
+  }
+
+  .custom-bg {
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+  }
+}
+.contact-section {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 400;
+  color: $gray;
+
+  .contact-title {
+    font-weight: 700;
+    padding: 5rem 0;
+    margin-bottom: 3rem;
+    background-color: $orange-light;
+  }
+}
+.user-form {
+  .form-check-input {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0;
+    &:checked {
+      background-color: $dark-color;
+      border-color: $dark-color;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .form-check-label {
+    line-height: 1.5rem;
+    padding-left: 0.25rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  textarea {
+    min-height: 100px;
+  }
+
+  .message-counter {
+    top: 0.5rem;
+    right: 2rem;
+  }
+
+  .invalid-tooltip {
+    padding: 0.125rem 0.5rem;
+  }
+}

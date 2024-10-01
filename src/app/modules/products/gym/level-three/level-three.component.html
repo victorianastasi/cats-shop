@@ -1,0 +1,17 @@
+<h2 class="title-bg">Gimnasio de 3 niveles</h2>
+
+<div class="row row-cols-1 row-cols-sm-2 g-3">
+  <div class="col" *ngFor="let levelThreeGym of levelThreeGyms">
+    <app-card
+      [title]="levelThreeGym.title"
+      [icon]="levelThreeGym.icon"
+      [description]="levelThreeGym.description"
+      [sizes]="levelThreeGym.sizes"
+      [price]="levelThreeGym.price"
+      [image]="levelThreeGym.image"
+      [classColor]="levelThreeGym.classColor"
+      [customClass]="levelThreeGym.customClass"
+      [imageContain]="levelThreeGym.imageContain"
+    ></app-card>
+  </div>
+</div>
